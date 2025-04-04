@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariel B. Gonzales - Portfolio</title>
+    <style>
+        /* General Reset and Body Styles */
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Navigation Styles */
+        header {
+            background-color: #222;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: orange;
+            background-color: #333;
+        }
+
+        /* Page Styles */
+        .page {
+            width: 80%;
+            min-height: 80vh;
+            background-color: #333;
+            margin: 80px auto 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Page 1 (Portfolio Title) */
+        .page-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .page-1 h1 {
+            font-size: 60px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+			color: #ff6600;
+        }
+
+        .name-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .line {
+            width: 100px;
+            height: 2px;
+            background-color: white;
+            margin: 0 15px;
+        }
+
+        .page-1 h2 {
+            font-size: 30px;
+            color: orange;
+            font-weight: bold;
+            margin: 0;
+        }
+
+    /* Page 2 (About Me) */
+.page-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+}
+
+.page-2 .text-section {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.page-2 h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+	color: #ff6600;
+}
+
+.page-2 p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto; /* Center the paragraph */
+    width: 80%; /* Optional: limits width for a better appearance */
+}
+
+.page-2 .image-section {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-2 .image-section img {
+    width: 200px;
+    border-radius: 5px;
+    border-top: 5px solid orange;  /* Orange border at the top */
+    border-right: 5px solid orange; /* Orange border on the right side */
+}
+
+
+        /* Page 3 (Education) */
+.page-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-3 h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #ff6600; /* Set the heading color to match the theme */
+}
+
+.page-3 .education-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 20px; /* Space between the boxes */
+    justify-content: space-between; /* Distribute the space evenly between boxes */
+    width: 80%; /* Prevent items from stretching across the full width */
+}
+
+.page-3 .education-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically inside each box */
+    justify-content: center;
+    align-items: center; /* Center items within the box */
+    padding: 15px;
+    border: 2px solid #444; /* Border around each education item */
+    border-radius: 8px;
+    background-color: #333; /* Background color for each item */
+    text-align: left; /* Align text to the left inside the box */
+    width: 45%; /* Set width to 45% for 2 items in a row */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.page-3 .education-item h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: orange; /* Heading color */
+}
+
+.page-3 .education-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ddd; /* Lighter color for the school name */
+}
+
+.page-3 .education-item p {
+    font-size: 16px;
+    color: #aaa; /* Lighter color for the date */
+    margin-top: 5px;
+    text-align: left; /* Align the date text to the left */
+    white-space: nowrap;
+    padding: 5px;
+    border-top: 2px solid orange; /* Orange top border for distinction */
+}
+
+
+       /* Page 4 (Work Experience) */
+.page-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-4 h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+	color: #ff6600;
+}
+
+.page-4 .work-experience-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 20px; /* Space between boxes */
+    justify-content: space-between; /* Space out the items */
+    width: 80%; /* Adjust width to prevent stretching */
+}
+
+.page-4 .work-experience-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically inside each box */
+    justify-content: center;
+    align-items: center; /* Center items within the box */
+    padding: 15px;
+    border: 2px solid #444; /* Border around each work experience item */
+    border-radius: 8px;
+    background-color: #333; /* Background color for each item */
+    text-align: left; /* Align text to the left inside the box */
+    width: 45%; /* Set each item width to 45% for 2 items in a row */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+}
+
+.page-4 .work-experience-item h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: orange; /* Heading color */
+}
+
+.page-4 .work-experience-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ddd; /* Lighter color for the position/job title */
+}
+
+.page-4 .work-experience-item p {
+    font-size: 16px;
+    color: #aaa; /* Lighter color for the date */
+    margin-top: 5px;
+    text-align: left; /* Align date text to the left */
+    white-space: nowrap;
+    padding: 5px;
+    border-top: 2px solid orange; /* Orange top border for distinction */
+}
+
+        /* Page 5 (Skills) */
+.page-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align content to the center */
+    padding: 20px;
+    background-color: #333; /* Light background for the whole page */
+}
+
+.page-5 h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff6600;
+}
+
+.page-5 .skills-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    width: 100%; /* Make sure the container has full width */
+    justify-content: center; /* Center the content */
+}
+
+.page-5 .skills-section div {
+    text-align: center;
+    margin: 10px;
+    width: 20%; /* Adjust width for skill items */
+}
+
+.page-5 .skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: orange;
+}
+
+.page-5 .certificates-section {
+    width: 80%; /* Adjust width of the container */
+    margin-top: 40px;
+    padding: 20px;
+    border: 2px solid #ff6600; /* Orange border around the box */
+    border-radius: 10px;
+    background-color: #333; /* White background for the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.page-5 .certificates-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: orange;
+    text-align: center; /* Center the title */
+}
+
+.page-5 .certificates-section p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center; /* Align text to center */
+    color: #ddd; /* Lighten the color for text */
+}
+
+.page-5 .examination-box {
+    width: 80%; /* Adjust width of the container */
+    padding: 20px;
+    border: 2px solid #ff6600; /* Orange border around the box */
+    border-radius: 10px;
+    background-color: #333;/* White background for the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin-top: 40px;
+}
+
+.page-5 .examination-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: orange;
+    text-align: center; /* Center the title */
+}
+
+.page-5 .examination-box p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center; /* Align text to center */
+    color: #ddd; /* Lighten the color for text */
+}
+
+        /* Page 6 (Contact) */
+.page-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Ensure the page takes full height */
+    padding-bottom: 50px; /* Add some padding to prevent footer overlap */
+}
+
+.page-6 h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.page-6 .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Add space between info and footer */
+}
+
+.page-6 .contact-info p {
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 2px solid #ff6600; /* Orange border around paragraph */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #fff; /* White background for the box */
+    width: 80%; /* Adjust width of the box */
+    text-align: center; /* Center the text within the box */
+    color: #333; /* Text color */
+}
+
+.page-6 footer {
+    position: relative; /* Allow footer to stay at the bottom */
+    bottom: 0;
+    width: 100%;
+    background-color: #ff6600; /* Orange background for footer */
+    color: white; /* White text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.page-6 footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-6 footer p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+.page-6 footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+        /* Page 7 (Thank You) */
+        .page-7 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column; /* Crucial for vertical centering */
+        }
+
+        .page-7 h1 {
+            font-size: 60px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+			color: #ff6600;
+        }
+
+        /* Orange Bars and Page Numbers (Common) */
+        .orange-bar {
+            position: absolute;
+            width: 20px;
+            background-color: orange;
+        }
+
+        .orange-bar.left {
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+
+        .orange-bar.right {
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .page {
+                width: 95%;
+                min-height: auto;
+                margin-top: 60px;
+                padding: 10px;
+            }
+
+            .page-1 h1,
+            .page-2 h1,
+            .page-3 h1,
+            .page-4 h1,
+            .page-5 h1,
+            .page-6 h1,
+            .page-7 h1 {
+                font-size: 40px;
+            }
+
+            .page-2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .page-2 .text-section,
+            .page-2 .image-section {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .page-2 .image-section img {
+                width: 150px;
+            }
+
+            .skills-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-section div {
+                margin: 10px 0;
+            }
+
+            .work-experience-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .work-experience-item p {
+                text-align: left;
+                white-space: normal;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#page-1">P O R T F O L I O</a></li>
+                <li><a href="#page-2">About Me</a></li>
+                <li><a href="#page-3">Education</a></li>
+                <li><a href="#page-4">Work Experience</a></li>
+                <li><a href="#page-5">Skills</a></li>
+                <li><a href="#page-6">Contact</a></li>
+                <li><a href="#page-7">Thank You</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="page-1" class="page page-1">
+            <div class="header">
+                <h1>P O R T F O L I O</h1>
+                <div class="name-container">
+                    <div class="line"></div>
+                    <h2>Ariel B. Gonzales</h2>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="orange-bar left"></div>
+            <div class="orange-bar right"></div>
+            <div class="page-number">1</div>
+        </div>
+
+        <div id="page-2" class="page page-2">
+            <div class="text-section">
+                <h1>ABOUT ME</h1>
+                <p>Hello Im Ariel Gonzales, I currently Enrolled Bachelor of Science in Information Technology at Our Lady of
+                    Fatima University , 34 years old, I'm deeply passionate about technology and its potential to transform
+                    lives and industries. My studies have provided me with a solid foundation in programming, network
+                    security, and system administration.</p>
+            </div>
+            <div class="image-section">
+                <img src="C:\Users\dariu\OneDrive\Desktop\Gonzales-WBDV-11\Image\download ariel pic.jpg" alt="Ariel Gonzales">
+            </div>
+            <div class="orange-bar left"></div>
+            <div class="orange-bar right"></div>
+            <div class="page-number">2</div>
+        </div>
+
+        <div id="page-3" class="page page-3">
+            <h1>EDUCATION</h1>
+            <div class="education-item">
+                <h2>Ilocos Norte College of Arts and Trades (2008-2011)</h2>
+                <p>Hotel and Restaurant Services</p>
+            </div>
+            <div class="education-item">
+                <h2>AMA University</h2>
+                <p>Computer Engineering Undergrad</p>
+            </div>
+            <div class="education-item">
+                <h2>Our Lady of Fatima University</h2>
+                <p>Bachelor of Science in Information Technology - Currently enrolled</p>
+            </div>
+            <div class="orange-bar left"></div>
+            <div class="orange-bar right"></div>
+            <div class="page-number">3</div>
+        </div>
+
+        <div id="page-4" class="page page-4">
+            <h1>WORK EXPERIENCE</h1>
+            <div class="work-experience-item">
+                <div>
+                    <h2>Stock Man</h2>
+                    <h3>Jollibee 2 SM Fairview</h3>
+                </div>
+                <p>July 2011 - December 2011</p>
+            </div>
+            <div class="work-experience-item">
+                <div>
+                    <h2>Waiter</h2>
+                    <h3>Ilocos Rosewell Hotel</h3>
+                </div>
+                <p>June 2012 - November 2012</p>
+            </div>
+            <div class="work-experience-item">
+                <div>
+                    <h2>Room Attendant</h2>
+                    <h3>Cafe France Quezon City</h3>
+                </div>
+                <p>2013 - 2014</p>
+            </div>
+            <div class="work-experience-item">
+                <div>
+                    <h2>Service Crew</h2>
+                    <h3>UKL Hotel Ilocos Norte</h3>
+                </div>
+                <p>2014 - 2019</p>
+            </div>
+            <div class="orange-bar left"></div>
+            <div class="orange-bar right"></div>
+            <div class="page-number">4</div>
+        </div>
+
+        <div id="page-5" class="page page-5">
+            <h1>SKILLS</h1>
+            <div class="skills-section">
+                <div>
+                    <h2>Barista</h2>
+                </div>
+                <div>
+                    <h2>Bistro</h2>
+                </div>
+                <div>
+                    <h2>Baking</h2>
+                </div>
+            </div>
+            <div class="certificates-section">
+                <h2>Examination Taken and Certificate</h2>
+                <p>Commercial Cooking NC2</p>
+                <p>Food and Beverage NC2</p>
+                <p>IoT Fundamentals Big Data and Analytic (NetAcad)</p>
+                <p>CPA - Programming Essentials in C++ (NetAcad)</p>
+            </div>
+            <div class="orange-bar left"></div>
+            <div class="orange-bar right"></div>
+            <div class="page-number">5</div>
+        </div>
+
+        <div id="page-6" class="page page-6">
+            <h1>CONTACT</h1>
+            <div class="contact-info">
+                <p>09973926949</p>
+                <p>ag03041990@gmail.com</p>
+            </div>
+            <footer>
+    <div class="container">
+        <p>Name: Ariel B. Gonzales</p>
+        <p>Location: Caloocan City, Philippines</p>
+        <p>Email: <a href="mailto:abgonzales0745qc@student.fatima.edu.ph">abgonzales0745qc@student.fatima.edu.ph</a></p>
+        <p>
+            <a href="https://www.facebook.com/ariel.gonzales.710698" target="_blank" class="footer-link">ariel.gonzales.710698</a> |
+            <a href="https://www.youtube.com/@koberdamz757" target="_blank" class="footer-link">https://www.youtube.com/@koberdamz757</a>
+        </p>
+        <p>Phone: <a href="tel:+639973926949">09973926949</a></p>
+    </div>
+    <p>&copy; 2024 Ariel B. Gonzales. All rights reserved.</p>
+</footer>
+
+            <div class="orange-bar left"></div>
+            <div class="orange-bar right"></div>
+            <div class="page-number">6</div>
+        </div>
+
+        <div id="page-7" class="page page-7">
+            <h1>THANK YOU</h1>
+            <div class="orange-bar left"></div>
+            <div class="orange-bar right"></div>
+            <div class="page-number">7</div>
+        </div>
+    </main>
+</body>
+
+</html>
